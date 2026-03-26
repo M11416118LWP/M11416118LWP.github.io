@@ -144,7 +144,7 @@
 
             checkButtons(tx, ty);
             drawSciFiSkeleton(hand, gx, gy);
-            drawFingertips(hand, gx, gy);
+            drawAllKeypoints(hand, gx, gy);
             drawHoloDial(hand, i, gx, gy);
             drawCursor(tx, ty);
           }
@@ -227,13 +227,36 @@
         }
       }
 
-      function drawFingertips(hand, gx, gy) {
-        [4, 8, 12, 16, 20].forEach(idx => {
+      function drawAllKeypoints(hand, gx, gy) {
+        for (let idx = 0; idx < hand.keypoints.length; idx++) {
           let k = hand.keypoints[idx];
           let x = map(k.x, 0, 640, 0, width) + gx, y = map(k.y, 0, 480, 0, height) + gy;
-          noFill(); stroke(255, 180); circle(x, y, 12);
-          fill(255, 150); textSize(9); text(`ID:${idx}`, x+15, y-10);
-        });
+          
+          colorMode(HSB, 360, 100, 100);
+          let hueVal = (frameCount * 1.5 + idx * (360 / 21)) % 360;
+          let ptColor = color(hueVal, 90, 100);
+          colorMode(RGB, 255);
+          
+          fill(ptColor);
+          noStroke();
+          
+          push();
+          translate(x, y);
+          let scaleSize = 1.2;
+          beginShape();
+          for(let a = 0; a <= 360; a += 5) {
+            let rad = a * Math.PI / 180;
+            let hx = scaleSize * 16 * Math.pow(Math.sin(rad), 3);
+            let hy = -scaleSize * (13 * Math.cos(rad) - 5 * Math.cos(2*rad) - 2 * Math.cos(3*rad) - Math.cos(4*rad));
+            vertex(hx, hy);
+          }
+          endShape(CLOSE);
+          pop();
+          
+          if ([4, 8, 12, 16, 20].includes(idx)) {
+             fill(255, 150); textSize(9); text(`ID:${idx}`, x+20, y-15);
+          }
+        }
       }
 
       function drawVirtualButtons(gx, gy) {
