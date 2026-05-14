@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春季寵物賞櫻行為與旅遊趨勢報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sakura: {
+                            50: '#fff5f7',
+                            100: '#ffe6ec',
+                            200: '#ffccd9',
+                            300: '#ff99b3',
+                            400: '#ff668c',
+                            500: '#f83d6e',
+                            600: '#e31d50',
+                        },
+                        slate: {
+                            950: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .sakura-gradient {
+            background: linear-gradient(135deg, #ff99b3 0%, #f83d6e 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ffccd9, #f83d6e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #f83d6e;
+            border-radius: 10px;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .audio-player {
+            filter: invert(1) hue-rotate(180deg) brightness(1.5);
+        }
+    </style>
+</head>
+<body class="font-sans selection:bg-sakura-400 selection:text-white">
+
+    <!-- Hero / Header -->
+    <header class="relative min-h-[40vh] flex flex-col items-center justify-center text-center px-6 pt-12 pb-20 overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-72 h-72 bg-sakura-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+        
+        <div class="relative z-10">
+            <span class="inline-block px-4 py-1 mb-4 text-xs font-bold tracking-widest uppercase bg-sakura-500/20 text-sakura-300 rounded-full border border-sakura-500/30">
+                2024-2025 Trend Report
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black font-display mb-4 tracking-tight">
+                春季寵物 <span class="text-gradient">賞櫻行為</span> 研析
+            </h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-light">
+                探討伴侶動物在自然環境中的反應、旅遊趨勢與健康安全風險
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 space-y-24 pb-32">
+        
+        <!-- 1. 置頂：資訊圖表 -->
+        <section id="infographic" class="relative">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-1.5 h-8 bg-sakura-500 rounded-full"></div>
+                <h2 class="text-2xl font-bold font-display tracking-wide">視覺化指南 <span class="text-slate-500 text-sm font-normal ml-2">Infographic</span></h2>
+            </div>
+            <div class="glass-card p-4 md:p-8 overflow-hidden shadow-2xl transition-transform hover:scale-[1.01] duration-500">
+                <div class="rounded-xl overflow-hidden shadow-inner bg-black/20">
+                    <img src='https://opal.google/board/blobs/47a2e30c-1adf-4eb4-8d3a-cb02e6a6fc0a' alt='春季寵物賞櫻指南資訊圖表' class="w-full h-auto block" />
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 置中：短影片與音樂 -->
+        <section id="multimedia" class="relative">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-1.5 h-8 bg-sakura-500 rounded-full"></div>
+                <h2 class="text-2xl font-bold font-display tracking-wide">影音多媒體 <span class="text-slate-500 text-sm font-normal ml-2">Multimedia Highlights</span></h2>
+            </div>
+            
+            <div class="glass-card p-6 md:p-10">
+                <!-- Audio Player Background -->
+                <div class="mb-10 flex flex-col md:flex-row items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10">
+                    <div class="w-16 h-16 sakura-gradient rounded-full flex items-center justify-center animate-bounce shadow-lg shadow-sakura-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-lg font-bold">主題氛圍音樂</h3>
+                        <p class="text-slate-400 text-sm">搭配報告閱讀，體驗沉浸式春季氛圍</p>
+                    </div>
+                    <div class="w-full md:w-auto">
+                        <audio src='https://opal.google/board/blobs/9dce2f41-6657-4296-8e7d-de9a69855f5c' controls class="audio-player w-full"></audio>
+                    </div>
+                </div>
+
+                <!-- Video Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Video 1 -->
+                    <div class="space-y-4 group">
+                        <div class="aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-white/5 group-hover:border-sakura-500/50 transition-colors duration-300">
+                            <video src='https://opal.google/board/blobs/f0a30dcc-cece-4049-9fb4-5cfcc0500e35' autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="font-bold text-sakura-300">寵物行為反應</h4>
+                            <p class="text-xs text-slate-400 mt-1 uppercase tracking-tighter">Dogs under Cherry Blossoms</p>
+                        </div>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="space-y-4 group">
+                        <div class="aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-white/5 group-hover:border-sakura-500/50 transition-colors duration-300">
+                            <video src='https://opal.google/board/blobs/cf0ba0d8-438f-477d-8dcc-4f5f48408ff2' autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="font-bold text-sakura-300">環境敏感度與照護</h4>
+                            <p class="text-xs text-slate-400 mt-1 uppercase tracking-tighter">Cats Observing Environment</p>
+                        </div>
+                    </div>
+                    <!-- Video 3 -->
+                    <div class="space-y-4 group">
+                        <div class="aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-white/5 group-hover:border-sakura-500/50 transition-colors duration-300">
+                            <video src='https://opal.google/board/blobs/4672cffd-dc58-4f34-906f-c24743756891' autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                        <div class="px-2">
+                            <h4 class="font-bold text-sakura-300">友善設施與轉型</h4>
+                            <p class="text-xs text-slate-400 mt-1 uppercase tracking-tighter">Pet Friendly Stations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 置底：正式報告 -->
+        <section id="report" class="relative">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-1.5 h-8 bg-sakura-500 rounded-full"></div>
+                <h2 class="text-2xl font-bold font-display tracking-wide">專題報告內容 <span class="text-slate-500 text-sm font-normal ml-2">Full Research Report</span></h2>
+            </div>
+
+            <!-- Summary Bento -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="md:col-span-3 glass-card p-8 border-l-4 border-l-sakura-500">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-sakura-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                        報告摘要
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 leading-relaxed">
+                        <li class="flex gap-3"><span class="text-sakura-500 font-bold">•</span> 探討伴侶動物（貓與犬）在春季賞櫻等自然環境中的行為反應與適應性差異。</li>
+                        <li class="flex gap-3"><span class="text-sakura-500 font-bold">•</span> 分析近年崛起的寵物旅遊趨勢，以及觀光產業因應大型花季所推動的友善設施轉型。</li>
+                        <li class="flex gap-3"><span class="text-sakura-500 font-bold">•</span> 評估春季戶外賞花潛在的健康與安全風險，涵蓋植物毒性、季節性過敏與群眾壓力。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="glass-card p-8 md:p-12 space-y-12 leading-loose text-slate-300">
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-lg italic text-slate-400 border-l-2 border-slate-700 pl-6 mb-12">
+                        隨著氣溫回暖，許多飼主期盼帶著可愛貓貓、汪汪欣賞粉紅春天櫻花。然而，這項戶外活動不僅是單純的休閒娛樂，更涉及複雜的動物生理與心理機制。根據 2024 年至 2025 年的最新文獻與市場趨勢報告，攜帶寵物參與春季賞櫻活動可由「寵物行為反應」、「寵物旅遊趨勢」與「春季健康安全」三個維度進行深入分析。
+                    </p>
+
+                    <div class="space-y-16">
+                        <!-- Section 1 -->
+                        <div class="relative">
+                            <span class="absolute -left-12 top-0 text-6xl font-black text-white/5 select-none">01</span>
+                            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                                <span class="w-8 h-8 rounded-lg bg-sakura-500/20 text-sakura-400 flex items-center justify-center mr-3 text-sm">一</span>
+                                寵物行為反應
+                            </h3>
+                            <p class="mb-4">
+                                在自然與陌生環境中，貓犬展現出截然不同的行為適應模式。根據 <span class="text-white font-medium">2025 年的旅遊趨勢報告</span> 指出，在攜寵出遊的比例中，<span class="text-sakura-300">犬隻佔比高達 95%</span>，此現象主要歸因於貓隻具有較高的環境敏感度 (Environmental Sensitivity)，容易對陌生的櫻花林或喧鬧人群產生壓迫感。
+                            </p>
+                            <p>
+                                針對犬隻，2022 年的行為學研究顯示，約有 <span class="bg-sakura-500/10 px-1 text-sakura-200">58.4% 的犬隻</span> 對高度環境刺激（如花粉飛揚、風聲及人群喧嘩）會表現出緊張感。在賞櫻勝地，這類高密度的人類活動易增加寵物焦慮，進而導致躲避、過度吠叫或活動力下降。此外，犬隻在自然環境中具有強烈的探索與標記行為 (Marking Behavior)，在高度管理的櫻花季景觀區內，需仰賴飼主適當的主動約束，以避免潛在的人寵衝突。
+                            </p>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div class="relative">
+                            <span class="absolute -left-12 top-0 text-6xl font-black text-white/5 select-none">02</span>
+                            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                                <span class="w-8 h-8 rounded-lg bg-sakura-500/20 text-sakura-400 flex items-center justify-center mr-3 text-sm">二</span>
+                                寵物旅遊趨勢
+                            </h3>
+                            <p class="mb-4">
+                                近年來，帶寵物共同參與節慶活動已成為 <span class="text-white font-medium underline decoration-sakura-500">寵物觀光 (Pet Tourism)</span> 的重要推動力。2024 年的市場數據顯示，超過 40% 的飼主會選擇與寵物一同旅行。此「它經濟」的崛起促使全球大型節慶進行友善轉型。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4 my-8">
+                                <div class="bg-white/5 p-5 rounded-xl border border-white/5">
+                                    <h4 class="text-sakura-300 font-bold mb-2">西方案例</h4>
+                                    <p class="text-sm">美國「華盛頓國家櫻花節」設立寵物舒適站，並舉辦專屬的狗狗櫻花風箏節。</p>
+                                </div>
+                                <div class="bg-white/5 p-5 rounded-xl border border-white/5">
+                                    <h4 class="text-sakura-300 font-bold mb-2">東方趨勢</h4>
+                                    <p class="text-sm">日本推出試行版寵物專用新幹線，讓犬隻能在無籠狀態下與飼主共赴賞櫻之旅。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3 -->
+                        <div class="relative">
+                            <span class="absolute -left-12 top-0 text-6xl font-black text-white/5 select-none">03</span>
+                            <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                                <span class="w-8 h-8 rounded-lg bg-sakura-500/20 text-sakura-400 flex items-center justify-center mr-3 text-sm">三</span>
+                                春季健康安全
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="p-6 rounded-2xl bg-red-500/5 border border-red-500/20">
+                                    <p class="font-bold text-red-400 mb-2 flex items-center gap-2">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                        植物毒性警告
+                                    </p>
+                                    <p class="text-sm">櫻花樹含 <span class="text-white font-bold">生氰糖苷 (Cyanogenic Glycosides)</span>。誤食瓣或枝可能釋放氰化物，導致嘔吐、呼吸困難甚至死亡。</p>
+                                </div>
+                                <p>
+                                    除了植物毒性，春季亦是 <span class="text-white">花粉症 (Pollinosis)</span> 的好發期，寵物的過敏反應多表現於皮膚紅腫、頻繁舔腳。此外，春季戶外草叢為蜱蟲、跳蚤等寄生蟲的活躍區。專家建議飼主可使用寵物推車並保持適當社交距離，以確保寵物安全。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-20 pt-10 border-t border-white/10">
+                        <h3 class="text-2xl font-bold text-white mb-6">結論</h3>
+                        <p>
+                            帶著可愛貓犬欣賞春季櫻花是一項能增進人寵羈絆的活動，但在蓬勃發展的寵物旅遊趨勢下，飼主必須審慎評估不同物種對環境變化的行為反應，並嚴格把關潛在的健康安全風險。透過完善的行前準備與新興的寵物友善服務，方能在保障動物福祉的前提下，創造美好且安全的春季旅遊體驗。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- References -->
+                <div class="mt-16 bg-black/30 p-8 rounded-2xl border border-white/5">
+                    <h4 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">引用文獻來源 / References</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-400">
+                        <li class="flex gap-2"><span>1.</span> Understanding the Risks: Are Cherry Blossoms Harmful to Dogs? (2024)</li>
+                        <li class="flex gap-2"><span>2.</span> 2025 Pet Travel and Vacation Insights Report (2025)</li>
+                        <li class="flex gap-2"><span>3.</span> Spring Allergies in Pets - Markham Woods Animal Hospital (2024)</li>
+                        <li class="flex gap-2"><span>4.</span> Do intense weather events influence dogs' and cats' behavior? Analysis of owner reported data in Italy (2022)</li>
+                        <li class="flex gap-2"><span>5.</span> National Cherry Blossom Festival Goes to the Dogs (2024)</li>
+                        <li class="flex gap-2"><span>6.</span> 寵物友善旅館在台灣的發展現況 (2024)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section (Instruction: Centered, Custom Style) -->
+        <footer class="mt-32 py-12 text-center border-t border-white/5">
+            <div class="flex flex-col items-center gap-4">
+                <div class="text-slate-400 text-sm">學號：M11416118</div>
+                <div class="text-lg">
+                    【主題探索報告】by <span class="italic text-red-500 font-bold">NTUST M11416118</span>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scroll to top visual helper -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="#infographic" class="w-12 h-12 sakura-gradient rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </a>
+    </div>
+
+</body>
+</html>
