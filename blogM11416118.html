@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty 夢幻樂園全攻略 - M11416118</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kitty: {
+                            pink: '#FFD1DC',
+                            hot: '#FF69B4',
+                            soft: '#FFF0F5',
+                            accent: '#F472B6',
+                            dark: '#831843'
+                        },
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fff5f7;
+            background-image: radial-gradient(#ffd1dc 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FF69B4, #F472B6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FFF0F5;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #FFD1DC;
+            border-radius: 10px;
+        }
+        .ribbon-title {
+            position: relative;
+            display: inline-block;
+        }
+        .ribbon-title::after {
+            content: '🎀';
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            font-size: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 leading-relaxed custom-scrollbar">
+
+    <!-- Hero Banner Section -->
+    <header class="relative h-[60vh] min-h-[400px] overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/e3b9709f-1887-4bb3-abc2-b1017d432e51' alt='Hello Kitty Banner' class="w-full h-full object-cover brightness-105" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-[#fff5f7]"></div>
+        </div>
+        
+        <div class="relative z-10 h-full flex flex-col items-center justify-end pb-12 px-6 text-center">
+            <div class="glass-card p-8 rounded-3xl max-w-4xl animate-float">
+                <span class="inline-block px-4 py-1 rounded-full bg-kitty-hot text-white text-xs font-bold tracking-widest uppercase mb-4 shadow-lg shadow-kitty-pink">Academic Insights & Cute Culture</span>
+                <h1 class="font-display font-extrabold text-4xl md:text-6xl text-kitty-dark mb-4">
+                    跟我一起掉進粉紅泡泡！<br>
+                    <span class="text-gradient">全球 Hello Kitty 夢幻樂園全攻略</span>
+                </h1>
+                <p class="text-kitty-dark/70 font-medium">學號：M11416118 • 探索感性帝國的奧秘</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-24">
+        
+        <!-- Intro Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-12 glass-card p-10 rounded-[2rem] border-l-8 border-kitty-hot">
+                <p class="text-xl md:text-2xl leading-relaxed text-gray-700 italic">
+                    「在當代大眾文化中，『可愛』不僅是一種審美，更是一種強大的社會生產力。當我們談論 Hello Kitty 時，我們談論的不再僅僅是一個沒有嘴巴的貓形圖案，而是一個橫跨半個世紀、估值數百億美元的感性帝國。」
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 1: Global Parks (Bento Grid) -->
+        <section class="space-y-8">
+            <div class="flex items-center gap-4">
+                <h2 class="font-display text-3xl font-bold text-kitty-dark ribbon-title">一、 全世界範圍內：三麗鷗樂園大點名！</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-kitty-pink/30 group">
+                    <div class="w-12 h-12 bg-kitty-soft rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🌈</div>
+                    <h3 class="font-bold text-xl text-kitty-dark mb-3">東京三麗鷗彩虹樂園</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        位於多摩市的旗艦據點。全室內設計徹底隔絕了外界的天氣與時間，創造了一個「永恆的春天」。高品質音樂劇與華麗室內遊行是高度精緻化的美學展演。
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-kitty-pink/30 group">
+                    <div class="w-12 h-12 bg-kitty-soft rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🎡</div>
+                    <h3 class="font-bold text-xl text-kitty-dark mb-3">九州和諧樂園 (Harmonyland)</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        戶外派的自然冒險，與自然共生。經典摩天輪與雲霄飛車在微風中運行，提供一種具「鄉愁感」的遊樂體驗，適合追求空間開闊感的粉絲。
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-kitty-pink/30 group">
+                    <div class="w-12 h-12 bg-kitty-soft rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">🏯</div>
+                    <h3 class="font-bold text-xl text-kitty-dark mb-3">安吉凱蒂貓家園 (Hello Kitty Park)</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        位於浙江安吉，將 Kitty 的形象植入於青山綠水間，試圖在地景藝術與商業 IP 之間尋找平衡。
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-kitty-dark p-8 rounded-3xl shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:rotate-12 transition-transform">✨</div>
+                    <h3 class="font-bold text-xl text-white mb-3">同場加映：博物館與快閃</h3>
+                    <p class="text-kitty-pink/80 leading-relaxed text-sm">
+                        濟州島的「Hello Kitty Island」以博物館形式解析設計演變；而散佈全球的快閃店，則像是一種城市中的「萌化干預」。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: History & Economy -->
+        <section class="relative">
+            <div class="absolute -left-4 top-0 w-24 h-24 bg-kitty-hot/10 rounded-full blur-3xl"></div>
+            <div class="relative glass-card p-10 rounded-[3rem] overflow-hidden">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1 space-y-6">
+                        <h2 class="font-display text-3xl font-bold text-kitty-dark ribbon-title">二、 從小貼紙到 600 億的奇幻夢境</h2>
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>從經濟史的角度看，三麗鷗樂園的誕生是一場驚心動魄的豪賭。</p>
+                            <p>創辦人辻信太郎的核心哲學：「小禮物，大微笑」。1990 年，東京彩虹樂園在泡沫經濟巔峰期投入了超過 <span class="font-bold text-kitty-hot px-2 bg-kitty-soft rounded">600 億日圓</span> 興建。</p>
+                            <p>雖曾面臨赤字與破產邊緣，但三麗鷗展現了極強的韌性，成功實施了從單純商品銷售到體驗經濟的華麗轉身。</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <div class="relative w-48 h-48">
+                            <div class="absolute inset-0 bg-kitty-pink rounded-full animate-pulse-slow"></div>
+                            <div class="absolute inset-4 bg-white rounded-full flex items-center justify-center text-5xl">💰</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Psychology -->
+        <section class="space-y-12">
+            <h2 class="font-display text-3xl font-bold text-kitty-dark text-center ribbon-title">三、 為什麼大家心甘情願被收編？</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center text-3xl mx-auto shadow-inner">🧸</div>
+                    <h4 class="font-bold text-kitty-dark">感官沈浸</h4>
+                    <p class="text-sm text-gray-500">極致燈光秀與情感表演，讓成年人暫時卸下社會角色，回歸童心。</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center text-3xl mx-auto shadow-inner">🍭</div>
+                    <h4 class="font-bold text-kitty-dark">造型餐點</h4>
+                    <p class="text-sm text-gray-500">「吃」不只是填飽肚子，而是視覺美學與感官經濟的延伸。</p>
+                </div>
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center text-3xl mx-auto shadow-inner">💖</div>
+                    <h4 class="font-bold text-kitty-dark">專屬記憶</h4>
+                    <p class="text-sm text-gray-500">利用稀缺性原理，限定周邊讓人們在購買時獲得了一份情感寄託。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Reality Check -->
+        <section class="bg-kitty-dark text-white p-12 rounded-[3rem] shadow-2xl">
+            <h2 class="font-display text-3xl font-bold mb-8">四、 夢幻背後的真心話：現實面</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-4 border-l-4 border-kitty-hot pl-6">
+                    <h4 class="font-bold text-kitty-pink">荷包粉碎機</h4>
+                    <p class="text-sm opacity-80">門票、造型餐飲、限定周邊，是對錢包的考驗。這反映了 IP 產業變現的高商業化程度。</p>
+                </div>
+                <div class="space-y-4 border-l-4 border-kitty-hot pl-6">
+                    <h4 class="font-bold text-kitty-pink">設施的時光停滯</h4>
+                    <p class="text-sm opacity-80">老牌園區部分機械設施帶有年代感。追求迪士尼級高科技刺激的人可能會感到失落。</p>
+                </div>
+                <div class="space-y-4 border-l-4 border-kitty-hot pl-6">
+                    <h4 class="font-bold text-kitty-pink">地理位置的博弈</h4>
+                    <p class="text-sm opacity-80">園區多位於偏遠郊區，考驗著遊客的導航功力與時間成本。</p>
+                </div>
+                <div class="space-y-4 border-l-4 border-kitty-hot pl-6">
+                    <h4 class="font-bold text-kitty-pink">經營的韌性挑戰</h4>
+                    <p class="text-sm opacity-80">光有 IP 是不夠的，若缺乏持續的在地化經營與更新，可愛王國也可能崩塌。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future -->
+        <section class="space-y-12">
+            <h2 class="font-display text-3xl font-bold text-kitty-dark ribbon-title">五、 下一站更精彩！三麗鷗宇宙的未來</h2>
+            
+            <div class="space-y-8">
+                <!-- Timeline/List -->
+                <div class="flex gap-6 group">
+                    <div class="flex-none w-12 h-12 bg-kitty-pink text-white rounded-full flex items-center justify-center font-bold">1</div>
+                    <div class="pt-2">
+                        <h4 class="font-bold text-lg text-kitty-dark group-hover:text-kitty-hot transition-colors">高端化轉型</h4>
+                        <p class="text-gray-600">2025 年預計開幕的海南三亞度假村，將五星級飯店與 IP 深度結合，滲透高端旅遊市場。</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-6 group">
+                    <div class="flex-none w-12 h-12 bg-kitty-pink text-white rounded-full flex items-center justify-center font-bold">2</div>
+                    <div class="pt-2">
+                        <h4 class="font-bold text-lg text-kitty-dark group-hover:text-kitty-hot transition-colors">數位虛擬化</h4>
+                        <p class="text-gray-600">「V-Puro」計畫啟動，標誌進入元宇宙。透過 VR 與虛擬音樂祭，粉絲無需跨越國境也能互動。</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group">
+                    <div class="flex-none w-12 h-12 bg-kitty-pink text-white rounded-full flex items-center justify-center font-bold">3</div>
+                    <div class="pt-2">
+                        <h4 class="font-bold text-lg text-kitty-dark group-hover:text-kitty-hot transition-colors">角色生態系多元化</h4>
+                        <p class="text-gray-600">酷洛米 (Kuromi)、大耳狗 (Cinnamoroll) 等個性化角色正站上 C 位，吸引更年輕的世代。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="text-center pt-12 pb-24">
+            <div class="inline-block glass-card px-10 py-12 rounded-[4rem] max-w-2xl relative overflow-hidden group">
+                <div class="absolute -right-4 -bottom-4 text-7xl opacity-10 group-hover:scale-125 transition-transform duration-500">🐈</div>
+                <p class="text-lg text-kitty-dark leading-relaxed relative z-10">
+                    三麗鷗樂園的存在，提醒著我們：<br>
+                    在這個日益理性的世界裡，我們永遠需要一個角落，讓「可愛」來療癒靈魂。<br>
+                    這場粉紅色的冒險，顯然還遠未結束。
+                </p>
+                <div class="mt-8 text-2xl">🎀 🎀 🎀</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Adding simple interaction: reveal elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
